@@ -25,7 +25,7 @@ class BookViewSet(ModelViewSet):
     permission_classes = [BookReadWriteUpdatePermission]
 
     def list(self,request):
-        querySet = self.get_queryset()
+print('Updated line!')
         if self.request.user.groups.filter(name='USER').exists():
             filteredQuerySet =  querySet.filter(is_available=True)
         filteredQuerySet =  querySet
