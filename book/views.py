@@ -39,6 +39,7 @@ class BookViewSet(ModelViewSet):
     
 
     def get_serializer_class(self):
+        print("Jim")
         if self.action == 'list':
             return BookDetailsSerializer
         elif self.action== 'retrieve':
