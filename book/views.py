@@ -26,7 +26,7 @@ class BookViewSet(ModelViewSet):
 
     def list(self,request):
 print('Updated line!')
-        if self.request.user.groups.filter(name='USER').exists():
+print('Updated line2!')
             filteredQuerySet =  querySet.filter(is_available=True)
         filteredQuerySet =  querySet
         paginatedResponse = self.paginate_queryset(filteredQuerySet)
